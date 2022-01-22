@@ -2,13 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {
     StyleSheet,
     View,
-    Text,
-    TouchableOpacity,
-    Image,
     SafeAreaView,
-    ScrollView,
-    Dimensions,
-    KeyboardAvoidingView,
     Button
 } from 'react-native';
 

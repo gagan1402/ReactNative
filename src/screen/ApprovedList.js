@@ -90,7 +90,7 @@ const ApprovedList = props => {
             ):null}
             </List.Accordion>
         </List.Section>
-    ):<Text>No Data Found</Text>:null;
+    ):<Text style={styles.noData}>No Data Found</Text>:null;
 
 
     return (
@@ -107,7 +107,9 @@ const ApprovedList = props => {
             <ScrollView>
                 <View style={styles.itemContent}>
                 {data}
+                {err?<Text style={styles.errStyle}>{err}</Text>:null}
                 </View>
+                
             </ScrollView>
         </SafeAreaView>
     );
@@ -123,7 +125,9 @@ leftContainer:{paddingLeft: 15,},
 inputContent:{backgroundColor:'#ddd',borderRadius:15},
 itemContent:{marginHorizontal:'3%'},
 itemAccordion:{backgroundColor:'white',borderBottomWidth:1,borderColor:'#9e9e9e6e'},
-acc:{margin:'1%',}
+acc:{margin:'1%',},
+errStyle:{color:'red',textAlign:'center'},
+noData:{textAlign:'center'},
 });
 
 
